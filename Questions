@@ -1,0 +1,27 @@
+1.A. W jakim celu używa się klas abstrakcyjnych, a w jakim interfejsów?
+
+Porównując wstępnie wykorzystanie zarówno interfejsów i klas abstrakcyjnych, przytoczę bardzo obrazowe porównanie, znalezione kiedyś na StackOverflow, które bardzo pomogło mi zobrazować sobie zasadniczą różnicę pomiędzy nimi:
+- Interfejsy – „Nie obchodzi mnie, jak to robisz, ale oto, co musisz zrobić.”
+- Klasy abstrakcyjne – „Wiem, co powinieneś zrobić i jak powinieneś to zrobić w niektórych/wielu przypadkach”.
+
+Przechodząc do konkretów:
+
+Generalnie interfejsy, wykorzystuję wtedy gdy z góry zakładam, że obiekty klas implementujących, muszą posiadać dane funkcjonalności. Dzięki temu już w fazie planowania struktury aplikacji, mam dużą kontrolę nad kodem i porządkiem w jego strukturze.
+Są one oczywiście bardzo przydatne do rozdzielania kodu i implementacji polimorfizmu.
+Od wejścia Java 8 posiadają one dodatkowo niezwykle przydatne metody domyślne, które sprawiają, że możliwość implementacji, bardzo poszerzyły możliwości interfejsów i nie stanowią niejako one jedynie szkieletu działania implementujących klas. 
+Oczywiście interfejsy są wręcz niezbędne w wielu sytuacjach, gdzie tych „szkieletów” dla jednej klasy potrzebujemy np. Kilku. Klasę abstrakcyjną jak każdą klasę możemy dziedziczyć tylko jedną.
+
+Interfejsy funkcjonalne(jedna metoda) wykorzystuję również tam, gdzie chcę posiłkować się wyrażeniami lamda. Klasy abstrakcyjne jedynie z jedną metodą abstrakcyjną mi tego nie umożliwią.
+Klas abstrakcyjnych używam wtedy, gdy potrzebuję np. stanu ze zmiennymi instancjami, czyli metod abstrakcyjnych.
+
+Podsumowując. 
+Klasy abstrakcyjne wykorzystuję głównie do obiektów, które są blisko powiązane, podczas gdy interfejsy gdy chcę zapewnić wspólne funkcjonalności klasom niepowiązanym.
+
+1.B. Czym różni się tablica od listy liniowej?
+
+Zakładam, że przez listę liniową rozumiem zwykłą listę jednokierunkową jako liniową strukturę danych.
+Najważniejszą różnicą jest złożoność obliczeniowa.  Jej wartość, dla odczytu w tablicy jest niezależny od ilości elementów - O(1), jednak dodawanie oraz usuwanie elementów kosztuje już dużo więcej obliczeń -  O(n). Odwrotnie jest w przypadku listy. Dla odczytu złożoność jest większa – O(n), lecz w przypadku dodawania i usuwania elementów wynosi już jedynie O(1).
+Krótko mówiąc jeśli mój zestaw danych to stałe, to skorzystam z tablicy. Jeśli chcę często dodawać i usuwać wartości – użyję Listy.
+Oczywiście, jest to powiedziane w dużym uproszczeniu w założeniu, że mam do wykorzystania tylko dwie opcje do wyboru a np. kolekcje są mi absolutnie nieznane.
+
+Być może jest to dość krótko powiedziane, ale z chęcią rozwinę i omówię dokładniej temat, podczas ewentualnej rozmowy.
